@@ -1,0 +1,129 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+
+typedef struct {
+char nom[50];
+char ref[10];
+int taille;
+int prix;
+int stock;
+} produits;
+
+//fonction pour créer des produits
+
+
+//fonction pour trier les produits
+void tri_produit(){}
+
+//fonction qui afffiche les produits 
+void afficherFichierProduits(const char* nomFichier) {
+    FILE* fichier = fopen(nomFichier, "r");
+    if (fichier == NULL) {
+        printf("Erreur : impossible d'ouvrir le fichier %s.\n", nomFichier);
+        return;
+    }
+
+    char ligne[100]; // Supposons que chaque ligne contient au maximum 100 caractères
+
+    while (fgets(ligne, sizeof(ligne), fichier) != NULL) {
+        printf("%s", ligne);
+    }
+
+    fclose(fichier);
+}
+//fonction pour afficher les 5 stocks les plus bas
+void affiche_low5_stcoks(){}
+
+// fonction recherche stock
+
+//fonction augmentation stock
+
+
+
+
+
+// Fonction pour afficher le menu principal
+void afficher_menu() {
+    printf("Menu principal :\n");
+    printf("1. menu gestion\n");
+    printf("2. menu clients\n");
+    printf("3. Achat\n");
+    printf("4. Quitter\n");
+}
+
+// Fonction pour afficher le menu de gestion des stocks
+void afficher_mode_gestion() {
+  //boucle qui limite taille stock
+    printf("Menu de gestion des stocks :\n");
+    tri_produit();
+    affiche_low5_stcoks();
+    printf("1. augmenter un stock un produit\n");
+    printf("2. Modifier un produit\n");
+    printf("3. Supprimer un produit\n");
+    printf("4. Rechercher un produit\n");
+    printf("5. Retour au menu principal\n");
+}
+
+// Fonction pour afficher le menu de gestion des clients
+void afficher_mode_achat() {
+    printf("Menu de gestion des clients :\n");
+    printf("1. Ajouter un client\n");
+    printf("2. Supprimer un client\n");
+    printf("3. Rechercher un client\n");
+    printf("4. Retour au menu principal\n");
+}
+
+// Fonction pour afficher le menu d'achat
+void afficher_menu_achat() {
+    printf("Menu d'achat :\n");
+    printf("1. Rechercher un produit\n");
+    printf("2. Commander un produit\n");
+    printf("3. Retour au menu principal\n");
+}
+
+int main() {
+    int choix = 0;
+
+    // Boucle principale du programme
+    while (choix != 4) {
+        afficher_menu();
+        printf("Entrez votre choix : ");
+        scanf("%d", &choix);
+        fflush(stdin);
+    }
+
+ switch (choix) {
+            case 1:
+                // Menu achat
+
+
+
+
+
+
+
+
+            case 2:
+                // menu client 
+
+
+            case 3:
+                // retour menu principal
+
+
+
+            case 4:
+            // Quitter le programme
+            printf("Au revoir !\n");
+            break;
+        default:
+            printf("Choix invalide.\n");
+            break;
+    }
+}
+
+return 0;
+
+}
