@@ -1,3 +1,10 @@
-pull 1 10 30 20
-casquette 2 2 8 20
-tshirt 3 5 15 20
+nom(aka reference)/taille ( 1,2 ou 3) /prix (5,10 ou 15)/stock ( de 0 à 50)
+
+pull  3 10 20
+veste 3 15 3
+tshirt  2 10 25
+pantalon 3 15 40
+jupe 2 10 8
+chaussette 1 5 45
+casquette 1 5 30
+sac 2 15 12
